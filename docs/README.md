@@ -1,5 +1,10 @@
 # Documentation
 
+## Requirements
+
+* NodeJS, tested on v12 and v13
+* CURL (As other ways didn't work when testing)
+
 ## Setting it up
 
 * Clone (either using git or **hub**) this repository
