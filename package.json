@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   "start": "node app/"
+    "start": "node app/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
     "express": "^4.17.1",
     "got": "^10.6.0",
     "mysql": "^2.18.1"
