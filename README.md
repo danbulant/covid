@@ -1,5 +1,7 @@
 # Covid website
 
+This repository is for the back-end.
+
 This project was created to help people find information about covid-2019 (also known as Coronavirus) and help them protect themselves.
 
 ## What is covid-2019 and Coronavirus
