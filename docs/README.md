@@ -13,3 +13,7 @@ Every response is in JSON and contains at least these fields:
 * `code` - HTTP status code
 * `type` - Type of response, see [types](TYPES.md)
 * `data` - Might be missing, depends of `type`.
+
+## Endpoints
+
+For list of endpoints, see [ENDPOINTS.md](ENDPOINTS.md)
