@@ -9,6 +9,7 @@
 
 * Clone (either using git or **hub**) this repository
 * Install dependencies (`npm i`)
+* Fetch data (Must be done at least once, but a cron is suggested)
 * Run it! (`npm start`)
 
 ## Format
