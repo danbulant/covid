@@ -57,7 +57,8 @@ module.exports = async () => {
                 pt++;
                 continue;
             }
-
+            if(!lines[i].children[u].children[0]) continue;
+            
             o[lang[pt]] = lines[i].children[u].children[0].data.trim();
             pt++;
         }
@@ -73,7 +74,7 @@ module.exports = async () => {
         death,
         recovered
     }
-    out.contries = countries;
+    out.countries = countries;
 
     fs.writeFileSync(__dirname + "/cases.json", JSON.stringify(out));
     return out;
