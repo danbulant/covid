@@ -13,7 +13,7 @@ app.get("/", (req, res)=>{
 
 app.get("/country/:country", (req, res)=>{
     if(!cases.countries){
-        cases = JSON.parse(require("fs").readFileSync(__dirname  + "/../cases.json"));
+        cases = JSON.parse(require("fs").readFileSync(__dirname  + "/../data/cases.json"));
     }
     if(!cases.countries[req.params.country]){
         return res.status(404).json({
@@ -30,7 +30,7 @@ app.get("/country/:country", (req, res)=>{
 
 app.get("/global", (req, res)=>{
     if(!cases.global){
-        cases = JSON.parse(require("fs").readFileSync(__dirname  + "/../cases.json"));
+        cases = JSON.parse(require("fs").readFileSync(__dirname  + "/../data/cases.json"));
     }
     res.json({
         code: 200,
@@ -38,6 +38,15 @@ app.get("/global", (req, res)=>{
         data: cases.global
     });
 });
+
+
+app.use(function (err, req, res, next) {
+    console.error(err);
+    res.status(500).json({
+        code: 500,
+        type: "e_internal"
+    });
+})
 
 app.listen(PORT, ()=>{
     console.log("[APP] Ready on port " + PORT);
