@@ -47,19 +47,23 @@ module.exports = async () => {
 
         var o = {};
         var lang = [
-            "Country", null, "cases", null, "deaths", "recovered", "active", "serious", "casePerMil"
+            "Country", "cases", null, "deaths", null, "recovered", "active", "serious", "casePerMil"
         ];
         var pt = 0;
 
         for(var u = 0; u < lines[i].children.length; u++){
             if(lines[i].children[u].type != "tag")continue;
+            if(!lines[i].children[u].children[0]) continue;
+
             if(lang[pt] == null){
                 pt++;
                 continue;
             }
-            if(!lines[i].children[u].children[0]) continue;
             
             o[lang[pt]] = lines[i].children[u].children[0].data.trim();
+
+            o[lang[pt]] = o[lang[pt]].replace(/,/gi, "");
+            
             pt++;
         }
 
