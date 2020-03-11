@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = 1025;
 
-const cases = {};
+var cases = {};
 
 app.get("/", (req, res)=>{
     res.json({
