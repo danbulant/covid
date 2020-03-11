@@ -2,12 +2,12 @@
 
 ## country
 
-`/country/:country`
+`/country/:country` -> `country` || `e_country_not_found`
 
 Shows information about given country.
 
 ## global
 
-`/global`
+`/global` -> `country_global`
 
 Shows global informations.
